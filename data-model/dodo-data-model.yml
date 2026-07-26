@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/dodo-trade-openapi.yml
+notes: >-
+  Derived from the generated DODO Trade / Route API OpenAPI. The Route API surface is
+  a single quote resource with no cross-entity id references, so the entity graph is
+  shallow (a response envelope wrapping quote data). On-chain concepts (pools, tokens,
+  proxy contracts) live in DODO's smart contracts, not the HTTP API.
+entities:
+  - name: RouteResponse
+    description: Envelope returned by the getDodoRoute operation.
+    fields: [status, data]
+  - name: RouteData
+    description: The swap quote payload with executable ABI calldata.
+    fields:
+      - resAmount
+      - resPricePerToToken
+      - resPricePerFromToken
+      - priceImpact
+      - useSource
+      - targetDecimals
+      - targetApproveAddr
+      - to
+      - data
+      - resCostGas
+relationships:
+  - from: RouteResponse
+    to: RouteData
+    kind: has_one
+    via: data

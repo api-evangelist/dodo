@@ -1,0 +1,14 @@
+{
+  "provider": "dodo",
+  "sources": [
+    "dodo-trade-api-openapi.yml"
+  ],
+  "outputs": [
+    "dodo-trade-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

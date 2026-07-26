@@ -1,0 +1,48 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/DODOEX/docs/blob/master/docs/tradeApi.md
+summary: >-
+  Cross-cutting request/response semantics for the DODO Trade / Route API, captured
+  from DODO's published documentation and derived from the generated OpenAPI. The
+  Route API is a read-only quoting API (GET); it has no idempotency contract,
+  pagination, or webhook surface. State changes happen on-chain via the returned
+  ABI calldata, not through the HTTP API.
+authentication:
+  style: api-key
+  location: query
+  parameter: apikey
+  notes: >-
+    Production access via the DODO Developer Portal requires an API key passed as the
+    `apikey` query parameter. The legacy public v1 endpoint historically required no key.
+  cross_reference: authentication/dodo-authentication.yml
+request:
+  transport: https
+  method: GET
+  base_url: https://route-api.dodoex.io
+  content_type: application/x-www-form-urlencoded (query string)
+  native_token_sentinel: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE'
+  amount_encoding: base units with token decimals (e.g. 1 ETH = 10**18)
+  slippage: integer percent 0-100
+response:
+  format: json
+  envelope:
+    status: integer application status code (200 = success)
+    data: object payload (quote fields + ABI calldata)
+  error_envelope:
+    status: non-200 application status code
+    cross_reference: errors/dodo-error-codes.yml
+idempotency:
+  supported: false
+  notes: Read-only quote endpoint; no idempotency key. On-chain execution idempotency is governed by the blockchain transaction, not the API.
+pagination:
+  supported: false
+  notes: Single-quote response; no list pagination.
+versioning:
+  scheme: host-migration
+  notes: >-
+    Service migrated from the legacy host to https://route-api.dodoex.io (Oct 31, 2021).
+    Documentation is versioned (version-1.0.0).
+  cross_reference: lifecycle/dodo-lifecycle.yml
+rate_limiting:
+  documented: false
+  notes: Rate limits are governed by the API key tier issued via the Developer Portal; no public numeric limits are published.

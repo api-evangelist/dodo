@@ -1,0 +1,62 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.npmjs.com/search?q=%40dodoex
+packages:
+  - language: javascript
+    registry: npm
+    name: "@dodoex/api"
+    description: DODO API Kit — JavaScript/TypeScript client for DODO trading and data APIs.
+    url: https://www.npmjs.com/package/@dodoex/api
+    install: npm install @dodoex/api
+    version: 3.7.0
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@dodoex/widgets"
+    description: Embeddable DODO swap/trade widget for web apps.
+    url: https://www.npmjs.com/package/@dodoex/widgets
+    install: npm install @dodoex/widgets
+    version: 3.19.0
+    repository: https://github.com/DODOEX/widgets
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@dodoex/contract-request"
+    description: Library for interacting with DODO smart contracts.
+    url: https://www.npmjs.com/package/@dodoex/contract-request
+    install: npm install @dodoex/contract-request
+    version: 1.3.0
+    repository: https://github.com/DODOEX/contract-request
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@dodoex/components"
+    description: DODO UI component library.
+    url: https://www.npmjs.com/package/@dodoex/components
+    install: npm install @dodoex/components
+    version: 3.2.0
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@dodoex/wallet-web3"
+    description: DODO wallet / web3 connection helpers.
+    url: https://www.npmjs.com/package/@dodoex/wallet-web3
+    install: npm install @dodoex/wallet-web3
+    version: 0.6.4
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@dodoex/btc-connect-react"
+    description: BTC connect (UniSat / OKX) React bindings used by DODO.
+    url: https://www.npmjs.com/package/@dodoex/btc-connect-react
+    install: npm install @dodoex/btc-connect-react
+    version: 1.5.10
+    repository: https://github.com/DODOEX/btc-connect
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@dodoex/icons"
+    description: DODO icons distributed as SVG React components.
+    url: https://www.npmjs.com/package/@dodoex/icons
+    install: npm install @dodoex/icons
+    official: true

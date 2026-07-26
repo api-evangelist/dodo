@@ -1,0 +1,7 @@
+generated: '2026-07-18'
+method: generated
+skills:
+  - file: dodo-get-swap-route.md
+    name: Get a DODO swap route quote
+    api: openapi/dodo-trade-openapi.yml
+    operations: [getDodoRoute]

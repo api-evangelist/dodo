@@ -1,0 +1,32 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/dodo-trade-openapi.yml
+notes: >-
+  Derived from the generated DODO Trade / Route API OpenAPI and DODO's published
+  documentation. DODO is a decentralized, on-chain protocol; it does not publish
+  enterprise compliance certifications (SOC 2 / ISO 27001 / PCI), so no Compliance
+  pointer is emitted. Smart-contract security is covered by third-party audits
+  (see https://github.com/DODOEX/dodo-audits).
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: API uses an apikey query parameter, not OAuth2.
+  - id: oidc
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use a custom {status,data} envelope, not application/problem+json.
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: /.well-known/security.txt returned 404 on dodoex.io and api.dodoex.io.
+  - id: json-api
+    conforms: false
+  - id: pagination
+    conforms: false
+    evidence: Single-quote response; no pagination.
+  - id: idempotency
+    conforms: false
+    evidence: Read-only GET quote endpoint; no idempotency key.
+  - id: openapi
+    conforms: partial
+    evidence: No provider-published OpenAPI; API Evangelist generated one from the documented endpoint.

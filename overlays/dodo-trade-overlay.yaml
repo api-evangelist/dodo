@@ -1,0 +1,15 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for DODO Trade / Route API
+  version: 1.0.0
+extends: openapi/dodo-trade-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-enriched: true
+      x-apievangelist-provider: dodo
+      x-apievangelist-category: crypto-defi-dex
+  - target: $.paths['/dodoapi/getdodoroute'].get
+    update:
+      x-apievangelist-conventions: conventions/dodo-conventions.yml
+      x-apievangelist-errors: errors/dodo-error-codes.yml

@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/dodo-trade-openapi.yml
+format: custom-envelope
+notes: >-
+  The DODO Trade / Route API does not use RFC 9457 problem+json. It returns a JSON
+  envelope of the shape {status, data} where `status` carries an application status
+  code. A successful quote returns status 200. Non-200 status values indicate an
+  error (e.g. unsupported chain, illiquid pair / no route, invalid parameters). DODO
+  does not publish an enumerated error-code registry for the Route API, so this
+  catalog captures the envelope contract and the documented success class only.
+envelope:
+  status_field: status
+  data_field: data
+problems:
+  - status: 200
+    class: success
+    title: Route quote returned
+    remediation: null
+  - status: non-200
+    class: error
+    title: Route request failed
+    remediation: >-
+      Verify required parameters (fromTokenAddress, toTokenAddress, decimals, fromAmount,
+      slippage, userAddr, chainId, rpc), confirm the chainId is supported, and confirm the
+      token pair has liquidity across the routed sources.
+    source_operation: openapi/dodo-trade-openapi.yml#getDodoRoute

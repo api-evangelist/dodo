@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of /.well-known/ on DODO hosts
+notes: >-
+  No /.well-known/ discovery documents were found on the DODO website or API hosts.
+  This is a recorded negative result, not a fabrication. No WellKnown or SecurityTxt
+  pointer is emitted in apis.yml because nothing was discoverable.
+hosts:
+  - host: https://dodoex.io
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+  - host: https://api.dodoex.io
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
