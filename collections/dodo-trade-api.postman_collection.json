@@ -1,0 +1,407 @@
+{
+  "item": [
+    {
+      "id": "5b203732-f54c-4e71-8171-ec2591b5ba49",
+      "name": "Trade",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8f419150-8e2d-48c5-8c26-8f7fad659f38",
+          "name": "Get a swap route quote",
+          "request": {
+            "name": "Get a swap route quote",
+            "description": {
+              "content": "Returns a real-time price quote and executable ABI calldata for swapping `fromAmount` of `fromTokenAddress` into `toTokenAddress` on the given chain, routed across DODO's aggregated liquidity sources. Use the native token sentinel address 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE for ETH/BNB/MATIC.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dodoapi",
+                "getdodoroute"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fromTokenAddress",
+                  "value": "<string>",
+                  "description": "(Required) Contract address of the token to sell (native sentinel for ETH/BNB/MATIC)."
+                },
+                {
+                  "disabled": false,
+                  "key": "fromTokenDecimals",
+                  "value": "<integer>",
+                  "description": "(Required) Decimals of the token to sell."
+                },
+                {
+                  "disabled": false,
+                  "key": "toTokenAddress",
+                  "value": "<string>",
+                  "description": "(Required) Contract address of the token to buy (native sentinel for ETH/BNB/MATIC)."
+                },
+                {
+                  "disabled": false,
+                  "key": "toTokenDecimals",
+                  "value": "<integer>",
+                  "description": "(Required) Decimals of the token to buy."
+                },
+                {
+                  "disabled": false,
+                  "key": "fromAmount",
+                  "value": "<string>",
+                  "description": "(Required) Amount of the token to sell, expressed with decimals (e.g. 1 ETH = 10**18)."
+                },
+                {
+                  "disabled": false,
+                  "key": "slippage",
+                  "value": "<integer>",
+                  "description": "(Required) Allowed slippage, 0-100 (unit percent)."
+                },
+                {
+                  "disabled": false,
+                  "key": "userAddr",
+                  "value": "<string>",
+                  "description": "(Required) User wallet address that will execute the swap."
+                },
+                {
+                  "disabled": false,
+                  "key": "chainId",
+                  "value": "<integer>",
+                  "description": "(Required) Chain id: 1 Ethereum, 56 BSC, 66 OEC, 128 HECO, 137 Polygon, 42161 Arbitrum One, 1285 MoonRiver, 1313161554 Aurora, 288 Boba, 43114 Avalanche."
+                },
+                {
+                  "disabled": false,
+                  "key": "rpc",
+                  "value": "<string>",
+                  "description": "(Required) Your own RPC node URL used for on-chain reads."
+                },
+                {
+                  "disabled": false,
+                  "key": "deadLine",
+                  "value": "<integer>",
+                  "description": "Unix timestamp (seconds) of the trade deadline block."
+                },
+                {
+                  "disabled": false,
+                  "key": "source",
+                  "value": "<string>",
+                  "description": "Restrict liquidity sources. If blank, all sources are quoted; set to \"dodo\" to quote DODO v1 and DODO v2 only."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "25af15fb-8c0f-49c5-91d5-05a652398b73",
+              "name": "A route quote with executable ABI calldata.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dodoapi",
+                    "getdodoroute"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fromTokenAddress",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fromTokenDecimals",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "toTokenAddress",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "toTokenDecimals",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "fromAmount",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "slippage",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "userAddr",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "chainId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "rpc",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "deadLine",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "source",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": 200,\n  \"data\": {\n    \"resAmount\": 4131.964781,\n    \"resPricePerToToken\": 0.24201566131747518,\n    \"resPricePerFromToken\": 4.131964,\n    \"priceImpact\": 0,\n    \"useSource\": \"0x\",\n    \"targetDecimals\": 6,\n    \"targetApproveAddr\": \"0xCB859eA579b28e02B87A1FDE08d087ab9dbE5149\",\n    \"to\": \"0xa356867fDCEa8e71AEaF87805808803806231FdC\",\n    \"data\": \"\",\n    \"resCostGas\": 0\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3dd19909-21be-46d6-8bd1-eb29fccda88c",
+              "name": "Client error. The `status` field in the envelope carries a non-200 code.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dodoapi",
+                    "getdodoroute"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fromTokenAddress",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fromTokenDecimals",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "toTokenAddress",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "toTokenDecimals",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "fromAmount",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "slippage",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "userAddr",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "chainId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "rpc",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "deadLine",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "source",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": 4826,\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d134ea1c-53c2-4a1f-91f1-9feccafdc442",
+              "name": "Server error. The `status` field in the envelope carries a non-200 code.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dodoapi",
+                    "getdodoroute"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fromTokenAddress",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fromTokenDecimals",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "toTokenAddress",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "toTokenDecimals",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "fromAmount",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "slippage",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "userAddr",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "chainId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "rpc",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "deadLine",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "source",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": 4826,\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://route-api.dodoex.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "apikey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ee4e80db-cdcd-4840-b89a-de728af3ad64",
+    "name": "DODO / Route Trade API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The DODO Trade API (also called the DODO Route API) provides real-time price quotes for swaps between arbitrary tokens across supported EVM chains, plus the ABI calldata needed to execute the swap on-chain against the DODORouteProxy / DODOV2Proxy contracts. It compares prices across a range of liquidity sources (DODO v1, DODO v2, 1inch, 0x, ParaSwap, professional market makers, and DODO's own aggregation algorithm). This OpenAPI is generated faithfully from DODO's published tradeApi.md documentation; DODO does not publish an OpenAPI of its own. Current production access via the DODO Developer Portal requires an API key passed as the `apikey` query parameter.\n\nContact Support:\n Name: DODO Developer Docs",
+      "type": "text/plain"
+    }
+  }
+}

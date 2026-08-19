@@ -2,17 +2,20 @@ generated: '2026-07-18'
 method: derived
 status: candidate
 source: openapi/dodo-trade-openapi.yml
-notes: >-
-  No official hosted or remote MCP server was found for DODO (searched docs, the
-  DODOEX GitHub organization, and MCP registries). This is a DERIVED candidate tool
-  list mapped from the documented DODO Trade / Route API operation, for use if a
-  provider- or community-hosted MCP server is stood up.
+notes: No official hosted or remote MCP server was found for DODO (searched docs, the DODOEX GitHub organization,
+  and MCP registries). This is a DERIVED candidate tool list mapped from the documented DODO Trade / Route
+  API operation, for use if a provider- or community-hosted MCP server is stood up.
 server:
   name: dodo
   transport: http
 tools:
-  - name: get_dodo_route
-    description: >-
-      Get a real-time swap route quote and executable ABI calldata for trading one
-      token for another across DODO's aggregated liquidity sources on a given EVM chain.
-    source_operation: openapi/dodo-trade-openapi.yml#getDodoRoute
+- name: get_dodo_route
+  description: Get a real-time swap route quote and executable ABI calldata for trading one token for
+    another across DODO's aggregated liquidity sources on a given EVM chain.
+  source_operation: openapi/dodo-trade-openapi.yml#getDodoRoute
+deployment:
+  mode: none
+  verified: derived
+  tools: 1
+  checked: '2026-08-12'
+  source: catalog MCP census

@@ -1,0 +1,105 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "DODO / Route Trade API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "apikey",
+      "value": "{{apikey}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Trade",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a swap route quote",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://route-api.dodoex.io/dodoapi/getdodoroute",
+            "params": [
+              {
+                "name": "fromTokenAddress",
+                "value": "",
+                "type": "query",
+                "description": "Contract address of the token to sell (native sentinel for ETH/BNB/MATIC)."
+              },
+              {
+                "name": "fromTokenDecimals",
+                "value": "",
+                "type": "query",
+                "description": "Decimals of the token to sell."
+              },
+              {
+                "name": "toTokenAddress",
+                "value": "",
+                "type": "query",
+                "description": "Contract address of the token to buy (native sentinel for ETH/BNB/MATIC)."
+              },
+              {
+                "name": "toTokenDecimals",
+                "value": "",
+                "type": "query",
+                "description": "Decimals of the token to buy."
+              },
+              {
+                "name": "fromAmount",
+                "value": "",
+                "type": "query",
+                "description": "Amount of the token to sell, expressed with decimals (e.g. 1 ETH = 10**18)."
+              },
+              {
+                "name": "slippage",
+                "value": "",
+                "type": "query",
+                "description": "Allowed slippage, 0-100 (unit percent)."
+              },
+              {
+                "name": "userAddr",
+                "value": "",
+                "type": "query",
+                "description": "User wallet address that will execute the swap."
+              },
+              {
+                "name": "chainId",
+                "value": "",
+                "type": "query",
+                "description": "Chain id: 1 Ethereum, 56 BSC, 66 OEC, 128 HECO, 137 Polygon, 42161 Arbitrum One, 1285 MoonRiver, 1313161554 Aurora, 288 Boba, 43114 Avalanche."
+              },
+              {
+                "name": "rpc",
+                "value": "",
+                "type": "query",
+                "description": "Your own RPC node URL used for on-chain reads."
+              },
+              {
+                "name": "deadLine",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (seconds) of the trade deadline block."
+              },
+              {
+                "name": "source",
+                "value": "",
+                "type": "query",
+                "description": "Restrict liquidity sources. If blank, all sources are quoted; set to \"dodo\" to quote DODO v1 and DODO v2 only."
+              }
+            ]
+          },
+          "docs": "Returns a real-time price quote and executable ABI calldata for swapping `fromAmount` of `fromTokenAddress` into `toTokenAddress` on the given chain, routed across DODO's aggregated liquidity sources. Use the native token sentinel address 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE for ETH/BNB/MATIC."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
