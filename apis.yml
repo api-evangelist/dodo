@@ -9,6 +9,17 @@ description: >-
   send directly to the DODORouteProxy / DODOV2Proxy contracts. DODO is backed by Pantera
   Capital and ships open-source smart contracts, JavaScript/TypeScript SDKs, a contract
   request library, and embeddable swap widgets.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
