@@ -1,7 +1,7 @@
 {
   "provider": "dodo",
   "sources": [
-    "dodo-trade-api-openapi.yml"
+    "_original/dodo-trade-openapi.yml"
   ],
   "outputs": [
     "dodo-trade-api-openapi.yml"
@@ -9,6 +9,13 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "dodo-trade-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "dodo-trade-openapi.yml: declared missing tag: Trade",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "dodo-trade-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

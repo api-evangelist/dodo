@@ -1,8 +1,8 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: DODO / Route Trade API
   version: 1.0.0
-  description: The DODO Trade API (also called the DODO Route API) provides real-time price quotes for swaps between arbitrary tokens across supported EVM chains, plus the ABI calldata needed to execute the swap on-chain against the DODORouteProxy / DODOV2Proxy contracts. It compares prices across a range of liquidity sources (DODO v1, DODO v2, 1inch, 0x, ParaSwap, professional market makers, and DODO's own aggregation algorithm). This OpenAPI is generated faithfully from DODO's published tradeApi.md documentation; DODO does not publish an OpenAPI of its own. Current production access via the DODO Developer Portal requires an API key passed as the `apikey` query parameter.
+  description: The DODO Trade API (also called the DODO Route API) provides real-time price quotes for swaps between arbitrary tokens across supported EVM chains, plus the ABI calldata needed to execute the swap on-chain against the DODORouteProxy / DODOV2Proxy contracts.
   contact:
     name: DODO Developer Docs
     url: https://docs.dodoex.io/en/developer
