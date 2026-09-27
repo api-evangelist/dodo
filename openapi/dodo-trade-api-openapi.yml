@@ -133,6 +133,14 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
+    RouteResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          description: Application status code; 200 indicates success.
+        data:
+          $ref: '#/components/schemas/RouteData'
     ErrorResponse:
       type: object
       properties:
@@ -142,14 +150,6 @@ components:
         data:
           type: object
           description: Optional error detail payload.
-    RouteResponse:
-      type: object
-      properties:
-        status:
-          type: integer
-          description: Application status code; 200 indicates success.
-        data:
-          $ref: '#/components/schemas/RouteData'
     RouteData:
       type: object
       properties:
