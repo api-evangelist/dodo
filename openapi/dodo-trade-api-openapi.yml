@@ -133,23 +133,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    RouteResponse:
-      type: object
-      properties:
-        status:
-          type: integer
-          description: Application status code; 200 indicates success.
-        data:
-          $ref: '#/components/schemas/RouteData'
-    ErrorResponse:
-      type: object
-      properties:
-        status:
-          type: integer
-          description: Non-200 application status code indicating the error class.
-        data:
-          type: object
-          description: Optional error detail payload.
     RouteData:
       type: object
       properties:
@@ -183,6 +166,23 @@ components:
         resCostGas:
           type: number
           description: Estimated gas cost.
+    ErrorResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          description: Non-200 application status code indicating the error class.
+        data:
+          type: object
+          description: Optional error detail payload.
+    RouteResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          description: Application status code; 200 indicates success.
+        data:
+          $ref: '#/components/schemas/RouteData'
   securitySchemes:
     apiKeyQuery:
       type: apiKey
