@@ -166,6 +166,14 @@ components:
         resCostGas:
           type: number
           description: Estimated gas cost.
+    RouteResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          description: Application status code; 200 indicates success.
+        data:
+          $ref: '#/components/schemas/RouteData'
     ErrorResponse:
       type: object
       properties:
@@ -175,14 +183,6 @@ components:
         data:
           type: object
           description: Optional error detail payload.
-    RouteResponse:
-      type: object
-      properties:
-        status:
-          type: integer
-          description: Application status code; 200 indicates success.
-        data:
-          $ref: '#/components/schemas/RouteData'
   securitySchemes:
     apiKeyQuery:
       type: apiKey
