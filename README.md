@@ -64,6 +64,111 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-DODO is a company surfaced as a portfolio company of pantera-capital and added to the API Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting the enrichment pipeline.
+DODO is a decentralized exchange (DEX) and on-chain liquidity provider built on the Proactive Market Maker (PMM) algorithm, engineered for capital-efficient liquidity and low slippage across many EVM blockchains. Its Trade / Route API aggregates prices across DODO v1/v2, 1inch, 0x, ParaSwap, professional market makers, and DODO's own aggregation algorithm, returning real-time swap quotes plus executable ABI calldata that developers send directly to the DODORouteProxy / DODOV2Proxy contracts. DODO is backed by Pantera Capital and ships open-source smart contracts, JavaScript/TypeScript SDKs, a contract request library, and embeddable swap widgets.
 
-Backed by: pantera-capital — https://dodoex.io/
+**Areas:** Company · Cryptocurrency · DeFi · Decentralized Exchange · Blockchain · Trading · Liquidity · Web3 · Swap
+
+## DODO on APIs.io
+
+Everything profiled for DODO is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/dodo/](https://apis.io/providers/dodo/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [DODO Trade API](https://apis.io/apis/dodo/dodo-trade-api/) — The Trade API from DODO — 1 operation(s) for trade.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [dodo](https://apis.io/servers/dodo/dodo/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Dodo Agentic Access](https://apis.io/agentic-access/dodo/dodo-agentic-access/)
+
+#### Collections (1)
+
+Postman and Open Collection request collections.
+
+- [DODO / Route Trade API](https://apis.io/collections/dodo/open-dodo-trade-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Dodo Trade Overlay](https://apis.io/overlays/dodo/dodo-trade-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Dodo Authentication](https://apis.io/security/dodo/dodo-authentication/)
+- [Dodo Domain Security](https://apis.io/security/dodo/dodo-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://dodoex.io/)
+- [Documentation](https://docs.dodoex.io/en/developer)
+- [API reference](https://docs.dodoex.io/en/developer/developer-portal)
+- [GitHub](https://github.com/DODOEX)
+
+## API Evangelist rating
+
+**Kin Score 18.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 14.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 39.9 |
+| Access clarity | 0.0 |
+
+**Agent readiness 33.5** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | verified |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.7** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/dodo/](https://apis.io/providers/dodo/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for DODO: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/dodo/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
